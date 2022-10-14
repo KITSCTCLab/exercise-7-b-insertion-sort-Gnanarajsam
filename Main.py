@@ -1,6 +1,13 @@
 from typing import List
 
 def insertionSort(array) -> List[int]:
+  size=len(array)
+  for index in range(1,size):
+    curr_ind=index
+    while curr_ind>0 and array[curr_ind-1]>array[curr_ind]:
+      array[curr_ind-1],array[curr_ind]=array[curr_ind],array[curr_ind-1]
+      curr_ind-=1
+      return array
   # Write your code here
 
 # data = [9, 5, 1, 4, 3]
